@@ -42,7 +42,7 @@
             <div class="search-btn">
                 <form action="">
                     <input type="text" id="mySearch" placeholder="Search.." title="Type in a category">
-                    <button type="submit" title="Chưa nhập gì để tìm kiếm" disabled
+                    <button type="button" id="js-search" title="Chưa nhập gì để tìm kiếm" disabled
                         class="ti-search searching"></button>
                 </form>
             </div>
@@ -179,7 +179,7 @@
                         Tham gia ngay nào!
                     </div>
                     <div id="sign-Up-form">
-                        <form action="" title="form-Đăng-ký">
+                        <form action="/assets/thank/thank.html" title="form-Đăng-ký">
                             <br><span>Họ và tên</span> <input maxlength="30" required minlength="3"
                                 title="Từ 3 đến 30 chữ cái" placeholder="Họ tên của bạn" id="sign-name"
                                 type="text"><label title="Từ 3 đến 30 chữ cái">*</label>
@@ -202,7 +202,7 @@
                             <span for="sex-another">Khác</span>
                             <label title="Phải chọn">*</label>
                             <br><span>Số CCCD</span> <input title="Chính xác 9 số" maxlength="9" number required
-                                minlength="9" placeholder="Số căn cước công dân" id="ID-card" type="number"><label
+                                minlength="9" placeholder="Số căn cước công dân" min="0" id="ID-card" type="number"><label
                                 title="Chính xác 9 số">*</label>
                             <div class="care">
                                 <br><span>Quan tâm</span>
@@ -258,7 +258,7 @@
                                 id="user-name" type="text">
                             <br><span>Mật khẩu</span> <input placeholder="Password" required minlength="6" id="password"
                                 type="password">
-                            <br><button class="btn-hover" id="js-sign-in-button" type="submit">Đăng nhập</button>
+                            <br><button class="btn-hover" id="js-sign-in-button" type="button">Đăng nhập</button>
                         </form>
                         <div class="results-booking">
 
@@ -290,11 +290,11 @@
                             Cho Số
                         </button>
                     </div>
-                    <input title="nhập số a" tabindex="3" class="inputNumber" type="text" name="numberA" id="A"
+                    <input title="nhập số a" tabindex="3" class="inputNumber border-input" type="text" name="numberA" id="A"
                         placeholder="Số a">
-                    <input title="nhập số b" tabindex="3" class="inputNumber" type="text" name="numberB" id="B"
+                    <input title="nhập số b" tabindex="3" class="inputNumber border-input" type="text" name="numberB" id="B"
                         placeholder="Số b">
-                    <input title="nhập số c" tabindex="3" class="inputNumber" type="text" name="numberC" id="C"
+                    <input title="nhập số c" tabindex="3" class="inputNumber border-input" type="text" name="numberC" id="C"
                         placeholder="Số c">
                     <br>
                     <div id="answer">

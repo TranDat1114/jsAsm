@@ -196,6 +196,7 @@ const sign_button = document.querySelector("#js-sign-button");
 const sign_in_button = document.querySelector("#js-sign-in-button");
 const signUpBtn = document.querySelector('#sign-name')
 const Interest = document.querySelectorAll('.interests');
+const sex = document.querySelectorAll('.sex');
 sign_button.addEventListener("click", () => {
     let thanhcong = true;
     let thongBao = ''
@@ -207,12 +208,24 @@ sign_button.addEventListener("click", () => {
         thongBao += '<br>Vui lòng nhập tài khoản';
         thanhcong = false;
     }
+    if (document.querySelector("#user-name-sign-up").value.length < 6) {
+        thongBao += '<br>Tài khoản lớn hơn hoặc bằng 6';
+        thanhcong = false;
+    }
     if (document.querySelector("#password-sign-up").value.length == 0) {
         thongBao += '<br>Vui lòng nhập mật khẩu';
         thanhcong = false;
     }
+    if (document.querySelector("#password-sign-up").value.length < 6) {
+        thongBao += '<br>Mật khẩu lơn hơn hoặc bằng 6';
+        thanhcong = false;
+    }
     if (document.querySelector('#ID-card').value.length != 9) {
         thongBao += '<br>Vui lòng nhập đúng định dạng CCCD';
+        thanhcong = false;
+    }
+    if (sex[0] == undefined && sex[1] == undefined && sex[2] == undefined) {
+        thongBao += '<br>Vui lòng chọn giới tính';
         thanhcong = false;
     }
     var checking = false;
@@ -399,6 +412,7 @@ answerBtn.addEventListener('click', () => {
 
 //search
 const search = document.querySelector('#mySearch');
+const searching = document.querySelector('#js-search')
 search.addEventListener('click', () => {
     if (search.value == '') {
         document.querySelector('.searching').disabled = true;
@@ -420,7 +434,10 @@ search.addEventListener('keyup', () => {
         document.querySelector('.searching').title = 'Nhấn để tìm kiếm';
         search.title = 'Tìm kiếm';
     }
+})
 
+searching.addEventListener('click',()=>{
+    window.open('https://www.google.com/search?q='+search.value)
 })
 
 
@@ -584,12 +601,27 @@ function checking_thanhtien() {
 for (const btn_SL of soluong_khuyenmai) {
     btn_SL.addEventListener('click', checking_thanhtien)
 }
+for (const btn_SL of soluong_khuyenmai) {
+    btn_SL.addEventListener('keyup', checking_thanhtien)
+}
 point_input.addEventListener('click', () => {
     for (let index = 0; index < body_khuyenmai.children.length - 1; index++) {
         if (Number(cost_point[index].value) > Number(point_input.value)) {
             body_khuyenmai.children[index].style.display = 'none';
-        }else{
+        } else {
             body_khuyenmai.children[index].style.display = '';
         }
     }
 })
+point_input.addEventListener('keyup', () => {
+    for (let index = 0; index < body_khuyenmai.children.length - 1; index++) {
+        if (Number(cost_point[index].value) > Number(point_input.value)) {
+            body_khuyenmai.children[index].style.display = 'none';
+        } else {
+            body_khuyenmai.children[index].style.display = '';
+        }
+    }
+})
+
+
+

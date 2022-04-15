@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+    font-family: 'Source Sans Pro', sans-serif;
+    
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to left top, #c2006e, #b1077d, #9c188a, #812696, #5f309e, #4b42aa, #3151b2, #005db7, #0074be, #0086b6, #0095a7, #00a196);
+    overflow: hidden;
+}
+
+.Thankfully {
+    text-align: center;
+    width: 60vw;
+    border-radius: 15px;
+    margin: 150px auto;
+background: #00a1960f;
+    padding: 30px;
+    height: 60vh;
+    filter:drop-shadow(100px);
+    box-shadow:3px 3px 50px rgba(255, 255, 255, 0.5);
+}
+.Thankfully:hover{
+    background:#c2006e6d;
+    /* background: linear-gradient(to left top, #000000, #2e2e2e, #585858, #87878725, #b9b9b909, #b9b9b91c, #b9b9b92e, #b9b9b925, #87878722, #58585816, #2e2e2e1f, #0000000e); */
+    box-shadow:3px 3px 50px rgba(0, 0, 0, 0.5);
+
+}
+
+.text {
+    font-size: 64px;
+    color: #fff;
+    line-height: 30vh
+}
+
+.wait {
+    font-size: 24px;
+}
+button{
+    border-radius:15px;
+    outline: none;
+    border: none;
+    margin:20px;
+    box-shadow:0px 3px 10px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.117);
+    padding: 20px;
+}
+button:hover{
+    cursor: pointer;
+    box-shadow:0px 3px 10px rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.117)
+    
+}
+button:hover a{
+    color:#fff;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
