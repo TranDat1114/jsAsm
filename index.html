@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Phú Đạt</title>
+    <link rel="icon" href="https://live.staticflickr.com/65535/51928844959_0360bd7ce8_b.jpg" type="image/icon type">
+    <script src="https://kit.fontawesome.com/4552defb60.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
+    <script src='https://cdn.jsdelivr.net/gh/vietblogdao/js/districts.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <!-- Begin:NAV -->
+            <ul id="nav">
+                <li><a class="btn-hover" href="#main">Trang chủ</a>
+                <li><a class="btn-hover" href="#tour" class="js-buy-tickets">Đặt vé ngay</a></li>
+                <li><a class="btn-hover" href="#content-sign">Đăng ký/Đăng nhập</a></li>
+                <!-- <li><a class="btn-hover" href="#content-sign">Đăng nhập</a></li> -->
+                <li class="btn-hover">
+                    <div class="more">
+                        More
+                        <i class="down ti-angle-down"></i>
+                    </div>
+                    <ul class="sub-Nav">
+                        <li><a class="btn-hover" href="#content-quiz">Đố vui nhập quà</a></li>
+                        <li><a class="btn-hover" href="#phuongtrinh">Giải phương trình</a></li>
+                        <li><a class="btn-hover" href="#content-khuyenmai">Đổi điểm nhận quà</a></li>
+                        <li><a class="btn-hover" href="#footer">Liên hệ</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- End:NAV -->
+            <div class="search-btn">
+                <form action="">
+                    <input type="text" id="mySearch" placeholder="Search.." title="Type in a category">
+                    <button type="submit" title="Chưa nhập gì để tìm kiếm" disabled
+                        class="ti-search searching"></button>
+                </form>
+            </div>
+        </div>
+        <div id="sliders">
+            <div class="cover"></div>
+            <div class="text-content">
+                <h2 id="text-heading">Du Lịch Biển</h2>
+                <p id="text-descriptio">Chuyến đi tràn ngập niềm vui với gia gia đình</p>
+                <div class="currentslide">
+                    <i class="ti-control-record round active" onclick="slideShow(0)"></i>
+                    <i class="ti-control-record round" onclick="slideShow(1)"></i>
+                    <i class="ti-control-record round" onclick="slideShow(2)"></i>
+                    <i class="ti-control-record round" onclick="slideShow(3)"></i>
+                    <i class="ti-control-record round" onclick="slideShow(4)"></i>
+                    <i class="ti-control-record round" onclick="slideShow(5)"></i>
+                    <i class="ti-control-record round" onclick="slideShow(6)"></i>
+                </div>
+            </div>
+            <a class="ti-angle-left prev" onclick="pluss(-1)"></a>
+            <a class="ti-angle-right next" onclick="pluss(1)"></a>
+        </div>
+        <div id="tour" class="content-tour">
+            <div class="tour content-width">
+                <div class="content-heading">
+                    TOUR DATES
+                </div>
+                <div class="content-sub-heading">
+                    Book ngay một vé cho mùa hè sôi động!
+                </div>
+                <ul class="img-tour">
+                    <li>
+                        <img src="./assets/img/banner_1.jfif" alt="newyork">
+                        <div class="infor-tour">
+                            <p><b>Biển nhà Đạt</b></p>
+                            <p class="tour-date">Ngày 27 Tháng 3 2022</p>
+                            <p>Đây sẽ là trải nghiệm tuyệt vời đáng đồng tiền bát gạo mà bạn khó có thể bỏ qua</p>
+                            <button class="js-buy-tickets btn-hover">Đặt vé ngay</button>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./assets/img/banner_2.jfif" alt="paris">
+                        <div class="infor-tour">
+                            <p><b>Biển hồ chắc vậy</b></p>
+                            <p class="tour-date">Ngày 28 Tháng 3 2022</p>
+                            <p>Đây sẽ là trải nghiệm tuyệt vời đáng đồng tiền bát gạo mà bạn khó có thể bỏ qua</p>
+                            <button class="js-buy-tickets btn-hover">Đặt vé ngay</button>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./assets/img/banner_3.jfif" alt="san francisco">
+                        <div class="infor-tour">
+                            <p><b>Biển ảnh trên mạng</b></p>
+                            <p class="tour-date">Ngày 29 Tháng 3 2022</p>
+                            <p>Đây sẽ là trải nghiệm tuyệt vời đáng đồng tiền bát gạo mà bạn khó có thể bỏ qua</p>
+                            <button class="js-buy-tickets btn-hover">Đặt vé ngay</button>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./assets/img/banner_4.jfif" alt="san francisco">
+                        <div class="infor-tour">
+                            <p><b>Biển báo giao thông</b></p>
+                            <p class="tour-date">Ngày 29 Tháng 3 2022</p>
+                            <p>Đây sẽ là trải nghiệm tuyệt vời đáng đồng tiền bát gạo mà bạn khó có thể bỏ qua</p>
+                            <button class="js-buy-tickets btn-hover">Đặt vé ngay</button>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="img-tour">
+                    <li>
+                        <img src="./assets/img/banner_5.jfif" alt="newyork">
+                        <div class="infor-tour">
+                            <p><b>Biển bậy biển bạ</b></p>
+                            <p class="tour-date">Ngày 27 Tháng 3 2022</p>
+                            <p>Đây sẽ là trải nghiệm tuyệt vời đáng đồng tiền bát gạo mà bạn khó có thể bỏ qua</p>
+                            <button class="js-buy-tickets btn-hover">Đặt vé ngay</button>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./assets/img/banner_6.jfif" alt="paris">
+                        <div class="infor-tour">
+                            <p><b>Biển Đông</b></p>
+                            <p class="tour-date">Ngày 28 Tháng 3 2022</p>
+                            <p>Đây sẽ là trải nghiệm tuyệt vời đáng đồng tiền bát gạo mà bạn khó có thể bỏ qua</p>
+                            <button class="js-buy-tickets btn-hover">Đặt vé ngay</button>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./assets/img/banner_7.jfif" alt="san francisco">
+                        <div class="infor-tour">
+                            <p><b>Biển Tây</b></p>
+                            <p class="tour-date">Ngày 29 Tháng 3 2022</p>
+                            <p>Đây sẽ là trải nghiệm tuyệt vời đáng đồng tiền bát gạo mà bạn khó có thể bỏ qua</p>
+                            <button class="js-buy-tickets btn-hover">Đặt vé ngay</button>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./assets/img/banner_5.jfif" alt="san francisco">
+                        <div class="infor-tour">
+                            <p><b>Biển Nhây</b></p>
+                            <p class="tour-date">Ngày 29 Tháng 3 2022</p>
+                            <p>Đây sẽ là trải nghiệm tuyệt vời đáng đồng tiền bát gạo mà bạn khó có thể bỏ qua</p>
+                            <button class="js-buy-tickets btn-hover">Đặt vé ngay</button>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="tickets-list">
+                    <li>Vé tháng 1 <span class="soldout-tickets">Sold out</span></li>
+                    <hr>
+                    <li>Vé tháng 2 <span class="soldout-tickets">Sold out</span></li>
+                    <hr>
+                    <li>Vé tháng 3 <span class="tickets round tickets-left">210</span></li>
+                    <hr>
+                    <li>Vé tháng 4 <span class="tickets round tickets-center">520</span></li>
+                    <hr>
+                    <li>Vé tháng 5 <span class="tickets round tickets-right">1320</span></li>
+                    <hr>
+                </ul>
+            </div>
+        </div>
+        <div class="sign" >
+            <div class="content-heading" id='content-sign'>
+                Tham gia cùng với Đạt!
+            </div>
+            <div class="content-sub-heading">
+                Sẵn sàng chờ đón các gói du lịch biển hấp dẫn
+            </div>
+            <div class="content-sign content-width">
+                <div id="sign-Up">
+                    <div class="content-heading font-medium">
+                        Đăng ký thành viên
+                    </div>
+                    <div class="content-sub-heading">
+                        Tham gia ngay nào!
+                    </div>
+                    <div id="sign-Up-form">
+                        <form action="" title="form-Đăng-ký">
+                            <br><span>Họ và tên</span> <input maxlength="30" required minlength="3"
+                                title="Từ 3 đến 30 chữ cái" placeholder="Họ tên của bạn" id="sign-name"
+                                type="text"><label title="Từ 3 đến 30 chữ cái">*</label>
+                            <br><span>Tài khoản</span> <input maxlength="30" title="từ 6 đến 30 ký tự" required
+                                minlength="6" placeholder="Nhập tại khoản" id="user-name-sign-up" type="text"><label
+                                title="từ 6 đến 30 ký tự">*</label>
+                            <br><span>Mật khẩu</span> <input minlength="6" required title="từ 6 đến 30 ký tự"
+                                placeholder="Mật khẩu dễ nhớ thôi ba" id="password-sign-up" type="password"><label
+                                title="từ 6 đến 30 ký tự">*</label>
+                            <br><span>Ngày sinh</span> <input placeholder="Nhập ngày sinh" id="birth-day"
+                                type="date"><label></label>
+                            <br><span>Giới tính</span> <input title="Chọn 1 trong 3" id="sex-male"
+                                placeholder="Giới tính" type="radio" name="sex" value="male" class="sex">
+                            <span for="sex-male">Nam</span>
+                            <input placeholder="Giới tính" type="radio" class="sex" id="sex-female" name="sex"
+                                value="female">
+                            <span for="sex-female">Nữ</span>
+                            <input placeholder="Giới tính" type="radio" class="sex" id="sex-another" name="sex"
+                                value="another">
+                            <span for="sex-another">Khác</span>
+                            <label title="Phải chọn">*</label>
+                            <br><span>Số CCCD</span> <input title="Chính xác 9 số" maxlength="9" number required
+                                minlength="9" placeholder="Số căn cước công dân" id="ID-card" type="number"><label
+                                title="Chính xác 9 số">*</label>
+                            <div class="care">
+                                <br><span>Quan tâm</span>
+                                <div class="interest">
+                                    <input title="Chọn các nội dung bạn quan tâm" placeholder="Nội dung quan tâm"
+                                        class="interests" value="Đồ ăn" type="checkbox">
+                                    <label title="Phải chọn">Đồ ăn</label><br>
+                                    <input title="Chọn các nội dung bạn quan tâm" value="Phong cảnh"
+                                        placeholder="Nội dung quan tâm" class="interests" type="checkbox"><label
+                                        title="Phải chọn">Phong cảnh</label><br>
+                                    <input title="Chọn các nội dung bạn quan tâm" value="Chụp ảnh"
+                                        placeholder="Nội dung quan tâm" class="interests" type="checkbox"><label
+                                        title="Phải chọn">Chụp ảnh</label><br>
+                                    <input title="Chọn các nội dung bạn quan tâm" value="Hoạt động"
+                                        placeholder="Nội dung quan tâm" class="interests" type="checkbox"><label
+                                        title="Phải chọn">Hoạt động</label><br>
+                                    <input title="Chọn các nội dung bạn quan tâm" value="khác"
+                                        placeholder="Nội dung quan tâm" class="interests" type="checkbox"><label
+                                        title="Phải chọn">Khác</label>
+                                </div>
+                                <label class="label-8" title="Theo đề bắt phải chọn">*</label>
+                            </div>
+
+
+                            <br><span>Tỉnh/Thành</span><select id="T-TP" name="calc_shipping_provinces" required>
+                                <option value="">Tỉnh / Thành phố</option>
+                            </select><label>*</label>
+                            <br><span>Quận/Huyện</span><select id="Q-H" name="calc_shipping_district" required>
+                                <option value="">Quận / Huyện</option>
+                            </select><label>*</label>
+                            <input class="billing_address_1" name="" type="hidden" value="">
+                            <input class="billing_address_2" name="" type="hidden" value="">
+                            <br><span>Bổ sung</span><textarea name="" minlength="10" required id="js-boSung" cols="30"
+                                rows="2"
+                                placeholder="Có thể bỏ qua nhưng theo đề thì nhập cỡ 10 chữ đi cho qua"></textarea><label
+                                title="Tối thiểu 10 số">*</label>
+                            <br><button class="btn-hover" id="js-sign-button" type="submit">Đăng ký</button>
+
+                        </form>
+                    </div>
+                </div>
+                <hr>
+                <div id="sign-In" class>
+                    <div class="content-heading font-medium">
+                        Có tài khoản rồi? Đăng nhập
+                    </div>
+                    <div class="content-sub-heading">
+                        Bắt đầu ngay một hành trình mới
+                    </div>
+                    <div id="sign-in-form">
+                        <form action="" title="form-Đăng-Nhập">
+                            <br><span>Tài khoản</span> <input placeholder="User-Name" required minlength="3"
+                                id="user-name" type="text">
+                            <br><span>Mật khẩu</span> <input placeholder="Password" required minlength="6" id="password"
+                                type="password">
+                            <br><button class="btn-hover" id="js-sign-in-button" type="submit">Đăng nhập</button>
+                        </form>
+                        <div class="results-booking">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="giai-PT content-width">
+            <div id="program1">
+                <div class="content-heading">Giải Phương Trình Bậc 2</div>
+                <div id="phuongtrinh">
+                    <div class="content-sub-heading size">
+                        aX<sup>2</sup> + bX + c = 0
+                    </div>
+                </div>
+                <div class="pt">
+                    <div id="count">
+                    </div>
+                    <div class="ibutton">
+                        <button class="btn-hover" tabindex="2" type="button" onclick="handle2();" disabled=" disabled"
+                            id="handle">
+                            Giải PT
+                        </button>
+                        <button class="btn-hover" tabindex="4" type="button" onclick="resetCount();" name="time_1"
+                            id="reset">Reset ( r
+                            )</button>
+                        <button class="btn-hover" tabindex="2" type="button" onclick="randomNumber();" id="random">
+                            Cho Số
+                        </button>
+                    </div>
+                    <input title="nhập số a" tabindex="3" class="inputNumber" type="text" name="numberA" id="A"
+                        placeholder="Số a">
+                    <input title="nhập số b" tabindex="3" class="inputNumber" type="text" name="numberB" id="B"
+                        placeholder="Số b">
+                    <input title="nhập số c" tabindex="3" class="inputNumber" type="text" name="numberC" id="C"
+                        placeholder="Số c">
+                    <br>
+                    <div id="answer">
+                        <h3>Hãy thực hiện phép toán</h3>
+                        <h4>Kết quả sẽ xuất hiện ở đây</h4>
+                    </div>
+
+                    <div id="clock">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="media-content" class="js-closer-media">
+            <iframe title="Video" id="media" width="1070" height="520" src="https://www.youtube.com/embed/w0AOGeqOnFY"
+                title="Ngắm đỡ video sông nha" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="content-quiz" id="content-quiz">
+            <div class="content-heading">
+                Trả lời hay nhận ngay khuyến mãi!
+            </div>
+            <div class="content-sub-heading">
+                Tham gia ngay với nhiều phần quà hấp dẫn đang chờ đón
+            </div>
+            <div class="quiz-content-heading">
+                Trả lời chính xác nhiều lần để thắng giải thưởng
+            </div>
+            <div class="fun-quiz content-width">
+                <p><input class="quiz-number" placeholder="Số a" type="number" readonly id="js-number-a">
+                    <span id="pheptoan">+</span>
+                    <input class="quiz-number" placeholder="Số b" type="number" readonly id="js-number-b">
+                </p>
+                <span>Đáp án của bạn</span>
+
+                <br><input title="Nhập đáp án" placeholder="Nhập đáp án của bạn" class="quiz-answer" type="number"
+                    name="answer" id="js-answer">
+                <div class="quiz-btn">
+                    <button type="submit" class="btn-hover" id="js-random-btn">Câu tiếp theo</button>
+                    <button class="btn-hover" id="js-answer-btn">Trả lời</button>
+                </div>
+
+                <div class="result-quiz js-result-quiz"></div>
+            </div>
+        </div>
+
+        <div class="content-khuyenmai content-width">
+            <div class="content-heading" id="content-khuyenmai">
+                Đổi thưởng ngay từ sự kiện trên
+            </div>
+            <div class="content-sub-heading">
+                Tham gia ngay và nhận nhiều phần quà hấp dẫn
+            </div>
+
+            <div class="result-quiz js-result-quiz"></div>
+            <div><span class="M-15">Lọc</span><select name="" id="point-input">
+                    <option value="9999">Tất cả <label for="">Điểm</label></option>
+                    <option value="500">500 <label for="">Điểm</label></option>
+                    <option value="2000">2000 <label for="">Điểm</label></option>
+                    <option value="4000">4000 <label for="">Điểm</label></option>
+                    <option value="5000">5000 <label for="">Điểm</label></option>
+                </select></div>
+            <br>
+            <table class="content-table-khuyenmai">
+                <thead>
+                    <tr>
+                        <th colspan="2">Phần quà</th>
+                        <th>Điểm</th>
+                        <th>Còn lại</th>
+                        <th>Số lượng</th>
+                        <th>Tổng hao</th>
+                    </tr>
+                </thead>
+                <tbody class="body-khuyenmai">
+                    <tr>
+                        <td><input checked type="checkbox" name="checking" class="khuyenmai-check"></td>
+                        <td>Iphone XSMAX</td>
+                        <td><input class="js-cost-point cost-point" readonly type="number" name="" value="100" id="">
+                        </td>
+                        <td><input type="number" name="conlai" readonly value="212" class="js-conlai number-table"></td>
+                        <td><input type="number" name="soluong" value="0" min="0"
+                                class="khuyenmai-SoLuong number-table"></td>
+                        <td><input type="number" name="tonghao" value="0" readonly class="js-tongHao number-table"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="checking" class="khuyenmai-check"></td>
+                        <td>MacBook Air 2077</td>
+                        <td><input class="js-cost-point cost-point" readonly type="number" name="" value="500" id="">
+                        </td>
+                        <td><input type="number" name="conlai" readonly value="110" class="js-conlai number-table"></td>
+                        <td><input type="number" name="soluong" value="0" min="0"
+                                class="khuyenmai-SoLuong number-table"></td>
+                        <td><input type="number" name="tonghao" value="0" readonly class="js-tongHao number-table"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="checking" class="khuyenmai-check"></td>
+                        <td>Iphone XSPro</td>
+                        <td><input class="js-cost-point cost-point" readonly type="number" name="" value="1000" id="">
+                        </td>
+                        <td><input type="number" name="conlai" readonly value="200" class="js-conlai number-table"></td>
+                        <td><input type="number" name="soluong" value="0" min="0"
+                                class="khuyenmai-SoLuong number-table"></td>
+                        <td><input type="number" name="tonghao" value="0" readonly class="js-tongHao number-table"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="checking" class="khuyenmai-check"></td>
+                        <td>MacBook Air 2069</td>
+                        <td><input class="js-cost-point cost-point" readonly type="number" name="" value="1200" id="">
+                        </td>
+                        <td><input type="number" name="conlai" readonly value="100" class="js-conlai number-table"></td>
+                        <td><input type="number" name="soluong" value="0" min="0"
+                                class="khuyenmai-SoLuong number-table"></td>
+                        <td><input type="number" name="tonghao" value="0" readonly class="js-tongHao number-table"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="checking" class="khuyenmai-check"></td>
+                        <td>Iphone 69</td>
+                        <td><input class="js-cost-point cost-point" readonly type="number" name="" value="1500" id="">
+                        </td>
+                        <td><input type="number" name="conlai" readonly value="20" class="js-conlai number-table"></td>
+                        <td><input type="number" name="soluong" value="0" min="0"
+                                class="khuyenmai-SoLuong number-table"></td>
+                        <td><input type="number" name="tonghao" value="0" readonly class="js-tongHao number-table"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="checking" class="khuyenmai-check"></td>
+                        <td>MacBook 96</td>
+                        <td><input class="js-cost-point cost-point" readonly type="number" name="" value="3000" id="">
+                        </td>
+                        <td><input type="number" name="conlai" readonly value="30" class="js-conlai number-table"></td>
+                        <td><input type="number" name="soluong" value="0" min="0"
+                                class="khuyenmai-SoLuong number-table"></td>
+                        <td><input type="number" name="tonghao" value="0" readonly class="js-tongHao number-table"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="checking" class="khuyenmai-check"></td>
+                        <td>MacBook Air 11</td>
+                        <td><input class="js-cost-point cost-point" readonly type="number" name="" value="4600" id="">
+                        </td>
+                        <td><input type="number" name="conlai" readonly value="11" class="js-conlai number-table"></td>
+                        <td><input type="number" name="soluong" value="0" min="0"
+                                class="khuyenmai-SoLuong number-table"></td>
+                        <td><input type="number" name="tonghao" value="0" readonly class="js-tongHao number-table"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="5">Tổng điểm</th>
+                        <th><input type="number" name="" readonly value="0" class="js-tongHao-final number-table" id="">
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- <div class="img-container">
+
+        </div> -->
+        <div class="media-container">
+            <div id="media">
+                <div class="content-heading">
+                    Xua tan lắng lo mệt mỏi
+                </div>
+                <div class="content-sub-heading">
+                    Hè chill hết ý
+                </div>
+                <div class="cover"></div>
+                <div class="vitamin-sea">
+                    <div id='video-media'>
+                        <button type="button" class="media-btn">
+                            Xem video giới thiệu chuyến đi
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="footer-icons content-width">
+            <a target="_blank" title="Liên hệ" href="https://www.facebook.com/Jayzneverzz"> <i
+                    class="fa fa-facebook-official round"></i></a>
+            <a target="_blank" title="Liên hệ" href="https://www.facebook.com/Jayzneverzz"> <i
+                    class="fa fa-instagram round"></i></a>
+            <a target="_blank" title="Liên hệ" href="https://www.facebook.com/Jayzneverzz"> <i
+                    class="fa fa-snapchat round"></i></a>
+            <a target="_blank" title="Liên hệ" href="https://www.facebook.com/Jayzneverzz"> <i
+                    class="fa fa-pinterest-p round"></i></a>
+            <a target="_blank" title="Liên hệ" href="https://www.facebook.com/Jayzneverzz"> <i
+                    class="fa fa-twitter round"></i></a>
+            <a target="_blank" title="Liên hệ" href="https://www.facebook.com/Jayzneverzz"> <i
+                    class="fa fa-linkedin round"></i></a>
+        </div>
+        <div>
+            <p class="footer-phone"><span class="ti-mobile">:</span>+84985950723</p>
+        </div>
+        <p class="small-font">Powered by <a href="https://www.facebook.com/Jayzneverzz" target="_blank">Tran Phu
+                Dat</a></p>
+    </div>
+
+    <a href="#main" class="ti-angle-double-up round" id="back-to-header" title="Trở về đầu trang"></a>
+    <div class="modal js-close-modal">
+        <div class="modal-content js-modal-content">
+            <button class="close-modal round js-close-modal" type="button" value="closer">X</button>
+            <div class="modal-heading">
+                Đặt vé
+            </div>
+            <div class="modal-main">
+                <form id="Tickets-buy" action="">
+                    <p><span>Tài khoản: </span><input required minlength="3" id="name-person" type="text"
+                            placeholder="Nhập User-Name"><span class="vnd" title="Phải nhập">*</span><span>Số
+                            người:</span><input type="number" value="1" id="people" name="people"
+                            placeholder="Số người dự kiến" min="1" max="1" </p>
+                    <p><span>Hạng vé: </span><select required name="tickets" id="rank-tickets">
+                            <option value="null">Chọn hạng vé</option>
+                            <option value="normal">Thường</option>
+                            <option value="VIP">VIP</option>
+                            <option value="superVIP">Siêu Cấp Vip Pro</option>
+                            <option value="EXTRAAA">Quần Hoa</option>
+                        </select><span class="vnd">*</span><span>Số lượng: </span><input type="number" value="1"
+                            id="quantity" name="quantity" placeholder="Nhập số lượng" min="1" max="999">
+                    </p>
+                    <p><span>Giá vé: </span><input id="money-cost" class="money" type="text" value='0' readonly><span
+                            class="vnd">VND</span><span>Mã
+                            giảm giá: </span><input id="sale-off" type="text" value="" placeholder="datxinhhi = 50%off">
+                    </p>
+                    <p><span>Thanh toán: </span>
+                        <input type="radio" name="pay" value="pay-online" class="pay" onclick="hienthi(true)"
+                            id="pay-online">
+                        <label for="online">Trực tuyến</label>
+                        <input type="radio" class="pay" id="pay-cast" name="pay" onclick="hienthi(false)"
+                            value="pay-cast">
+                        <label for="cast">Trực tiếp</label> <span class="vnd" title="Phải chọn">*</span>
+                    </p>
+
+                    <p>
+                        <span>Thành tiền: </span><input class="total-money" type="text" value=0 readonly><span
+                            class="vnd">VND</span><span class="money-banking">Phí banking: </span><input
+                            value="15,000 VND" class="money-banking" type="text" readonly value="15000" readonly>
+                    </p>
+
+                    <div class="Tickets-button">
+                        <button class="close js-close-modal btn-hover" type="button" value="closer">X</button>
+                        <button class="mua btn-hover" type="button" value="Submit">Đặt vé</button>
+                    </div>
+                </form>
+                <div class="results-booking">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="zalo-chat-widget" data-oaid="1350173519243423873" data-welcome-message="Rất vui khi được hỗ trợ bạn!"
+        data-autopopup="1" data-width="" data-height=""></div>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script> -->
+</body>
+
+</html>
+<script></script>
+
+<script src="assets/js/script.js"></script>
