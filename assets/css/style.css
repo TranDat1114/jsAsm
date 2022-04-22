@@ -487,8 +487,9 @@ li {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    display: block;
+    display: inline-block;
     transition: filter .3s ease-in-out;
+    filter:grayscale(0.3)
 }
 
 .img-tour img:hover {
